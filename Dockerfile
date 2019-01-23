@@ -1,5 +1,5 @@
 FROM alpine
-MAINTAINER David Personette <dperson@gmail.com>
+#MAINTAINER David Personette <dperson@gmail.com>
 
 #Install apt-get
 RUN apk update and apk add 
@@ -10,7 +10,13 @@ RUN apk --no-cache --no-progress upgrade && \
     addgroup -S vpn && \
     rm -rf /tmp/*
 #Install python3.6
-RUN apt-get install python3.6
+RUN apk add --no-cache python3 && \
+    python3 -m ensurepip && \
+    rm -r /usr/lib/python*/ensurepip && \
+    pip3 install --upgrade pip setuptools && \
+    if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
+    if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
+    rm -r /root/.cache
 
 COPY openvpn.sh /usr/bin/
 

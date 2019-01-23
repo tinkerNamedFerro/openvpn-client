@@ -7,7 +7,7 @@ RUN apk --no-cache --no-progress upgrade && \
                 shadow tini && \
     addgroup -S vpn && \
     rm -rf /tmp/*
-    sudo apt-get install python3.6
+RUN apt-get install python3.6
 
 COPY openvpn.sh /usr/bin/
 

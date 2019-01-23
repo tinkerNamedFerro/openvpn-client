@@ -1,12 +1,15 @@
 FROM alpine
 MAINTAINER David Personette <dperson@gmail.com>
 
+#Install apt-get
+RUN apk update and apk add 
 # Install openvpn
 RUN apk --no-cache --no-progress upgrade && \
     apk --no-cache --no-progress add bash curl ip6tables iptables openvpn \
                 shadow tini && \
     addgroup -S vpn && \
     rm -rf /tmp/*
+#Install python3.6
 RUN apt-get install python3.6
 
 COPY openvpn.sh /usr/bin/

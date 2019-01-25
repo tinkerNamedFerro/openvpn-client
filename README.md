@@ -9,7 +9,7 @@
 
 This is an OpenVPN client docker container. Running python 3.6 with selenium and a headless firefox.
 
-All creds go to /dperson/openvpn-client/ for the awsome shell script.
+All creds go to /dperson/openvpn-client/ for the awsome shell script. And Leafney/alpine-selenium-firefox for the headless ff and selenium.
 
 # How to use this image
 

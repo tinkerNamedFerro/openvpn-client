@@ -2,7 +2,7 @@ FROM alpine
 #MAINTAINER David Personette <dperson@gmail.com>
 
 #Install apt-get
-RUN apk update and apk add 
+RUN apk update
 # Install openvpn
 RUN apk --no-cache --no-progress upgrade && \
     apk --no-cache --no-progress add bash curl ip6tables iptables openvpn \

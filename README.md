@@ -1,17 +1,12 @@
-[![logo](https://raw.githubusercontent.com/dperson/openvpn-client/master/logo.png)](https://openvpn.net/)
 
-# OpenVPN
+<img src="logo.png" alt="OpenVPN" width="200"/>
+<img src="selenium.png" alt="Selenium" width="200"/>
 
-This is an OpenVPN client docker container. It makes routing containers'
-traffic through OpenVPN easy.
+# OpenVPN + Selenium 
 
-# What is OpenVPN?
+This is an OpenVPN client docker container. Running python 3.6 with selenium and a headless firefox.
 
-OpenVPN is an open-source software application that implements virtual private
-network (VPN) techniques for creating secure point-to-point or site-to-site
-connections in routed or bridged configurations and remote access facilities.
-It uses a custom security protocol that utilizes SSL/TLS for key exchange. It is
-capable of traversing network address translators (NATs) and firewalls.
+All creds go to /dperson/openvpn-client/ for the awsome shell script.
 
 # How to use this image
 

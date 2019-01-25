@@ -17,8 +17,14 @@ RUN apk add --no-cache python3 && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
     if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
     rm -r /root/.cache
+#Selenium / headless firefox
+RUN apk --no-cache --no-progress add unzip dbus-x11 ttf-freefont firefox-esr xvfb 
 
-COPY openvpn.sh /usr/bin/
+#Moving geckodriver
+COPY /vpn/geckodriver /usr/local/bin/
+RUN chmod a+x /usr/local/bin/geckodriver
+
+RUN COPY openvpn.sh /usr/bin/
 
 HEALTHCHECK --interval=60s --timeout=15s --start-period=120s \
              CMD curl -L 'https://api.ipify.org'

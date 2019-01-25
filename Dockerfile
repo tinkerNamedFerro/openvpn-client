@@ -18,7 +18,7 @@ RUN apk add --no-cache python3 && \
     if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
     rm -r /root/.cache
 #Selenium / headless firefox
-RUN apk --no-cache --no-progress add unzip dbus-x11 ttf-freefont firefox-esr xvfb && \
+RUN apk --no-cache --no-progress add unzip dbus-x11 ttf-freefont firefox xvfb && \
 	pip3 install selenium && \
     pip3 install pyvirtualdisplay
 

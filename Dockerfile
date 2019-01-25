@@ -24,8 +24,7 @@ RUN apk --no-cache --no-progress add unzip dbus-x11 ttf-freefont firefox-esr xvf
 COPY ./geckodriver /usr/local/bin/
 RUN chmod a+x /usr/local/bin/geckodriver
 
-COPY ./openvpn.sh /usr/bin/
-RUN  /usr/bin/openvpn.sh
+COPY openvpn.sh /usr/bin/
 
 HEALTHCHECK --interval=60s --timeout=15s --start-period=120s \
              CMD curl -L 'https://api.ipify.org'

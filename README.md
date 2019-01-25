@@ -1,6 +1,9 @@
+<p float="left">
+  <img src="logo.png" alt="OpenVPN" width="200"/>
+  <img src="selenium.png" alt="Selenium" width="200"/>
+</p>
 
-<img src="logo.png" alt="OpenVPN" width="200"/>
-<img src="selenium.png" alt="Selenium" width="200"/>
+
 
 # OpenVPN + Selenium 
 

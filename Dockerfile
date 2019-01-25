@@ -1,6 +1,9 @@
 FROM alpine
 #MAINTAINER David Personette <dperson@gmail.com>
 
+#Random suggested fix on github
+RUN echo "ipv6" >> /etc/modules
+
 #Install apt-get
 RUN apk update
 # Install openvpn

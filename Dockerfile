@@ -21,7 +21,7 @@ RUN apk add --no-cache python3 && \
 RUN apk --no-cache --no-progress add unzip dbus-x11 ttf-freefont firefox-esr xvfb 
 
 #Moving geckodriver
-COPY /vpn/geckodriver /usr/local/bin/
+COPY ./geckodriver /usr/local/bin/
 RUN chmod a+x /usr/local/bin/geckodriver
 
 RUN COPY openvpn.sh /usr/bin/
